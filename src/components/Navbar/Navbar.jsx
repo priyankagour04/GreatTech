@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import GetBtn from '../Buttons/GetBtn';
 
+import { VscStarEmpty } from "react-icons/vsc";
+
 const Navbar = () => {
     const links=[
         { name: "Home" },
@@ -15,9 +17,11 @@ const Navbar = () => {
     <>
       <nav className="flex ">
         {/* Brand Name */}
+       
         <div className="text-white w-2/6 p-5 text-4xl flex font-bold bg-gradient-custom relative" 
              style={{ clipPath: 'polygon(0 0, 100% 0, 90% 100%, 0% 100%)' }}>
-          GreatTech
+               <div className="text-5xl"> <VscStarEmpty /></div>
+         <h1 className='mt-1'> GreatTech</h1>
         </div>
 
         {/* Navigation Links */}
