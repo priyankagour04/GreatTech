@@ -20,6 +20,7 @@ export default {
         "footer-right-img": "url('/src/assets/images/footer-solid-right.png')",
         "Card-item": "url('/src/assets/images/service-item-shape.png')",
         "Counter-Card-item" :"url('/src/assets/images/counnter-bg-shape.png')",
+        "Offer-bg-shape" : "url('/src/assets/images/offer-bg-shape-left.png')"
       },
     },
   },
