@@ -11,6 +11,7 @@ import CountCard from "./components/Cards/CountCard";
 import Offering from "./components/Offering/Offering";
 import DevProcess from "./components/Development/DevProcess";
 import Blogs from "./pages/Blogs/Blogs";
+import Testimonials from "./components/Testimonials/Testimonial";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
       <Offering />
       <CountCard />
       <DevProcess/>
+      <Testimonials/>
       <Blogs/>
       <Footer />
     </>
