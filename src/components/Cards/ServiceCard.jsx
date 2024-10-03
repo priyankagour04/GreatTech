@@ -27,7 +27,7 @@ const services = [
 
 const ServiceCard = () => {
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 mt-8 ">
       {services.map((service, index) => (
         <div
           key={index}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion"; // Import framer-motion
 import bannerImg1 from "../../assets/images/banner-image1.jpg";
-import bannerImg2 from "../../assets/images/banner-image2.jpg"; // Add your other images
+import bannerImg2 from "../../assets/images/banner-image2.jpg";
 import bannerImg3 from "../../assets/images/banner-image3.jpg";
 import ExploreMoreBtn from "../../components/Buttons/ExploreMoreBtn";
 
@@ -17,6 +18,20 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [images.length]);
 
+  // Define Framer Motion variants for animation
+  const textVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const staggerContainer = {
+    visible: {
+      transition: {
+        staggerChildren: 0.3, // Add a delay between each child animation
+      },
+    },
+  };
+
   return (
     <>
       <div
@@ -28,32 +43,65 @@ const Home = () => {
           transition: "background-image 1.0s ease-in-out",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>{" "}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         {/* Overlay for better text contrast */}
-        <div className="z-10 ms-16  ">
-          <div className="flex items-center gap-3 mb-5">
-            {" "}
+        <motion.div
+          className="z-10 ms-20"
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+        >
+          <motion.div
+            className="flex items-center gap-3 mb-5"
+            variants={textVariants}
+            transition={{ duration: 0.8 }}
+          >
             <div className="w-10 h-4 bg-white rounded-xl"></div>
-            <h1 className="text-xl font-bold ">BEST IT SOLUTION PROVIDER</h1>
-          </div>
+            <motion.h1 className="text-xl font-bold">
+              BEST IT SOLUTION PROVIDER
+            </motion.h1>
+          </motion.div>
 
           <div className="-tracking-tighter">
-            {" "}
-            <p className="text-7xl font-bold ">Excellent IT Services </p>
-            <p className="text-7xl font-bold">for Your Success</p>
-            <p className="mt-8">
+            <motion.p
+              className="text-7xl font-bold"
+              variants={textVariants}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              Excellent IT Services
+            </motion.p>
+            <motion.p
+              className="text-7xl font-bold"
+              variants={textVariants}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              for Your Success
+            </motion.p>
+            <motion.p
+              className="mt-8"
+              variants={textVariants}
+              transition={{ duration: 0.8, delay: 0.9 }}
+            >
               Consectetur adipiscing elit aenean scelerisque at augue vitae
               consequat
-            </p>
-            <p className="mt-1">
-              quisque eget congue velit in cursus leo sed sodales est eget
-              turpis.
-            </p>
+            </motion.p>
+            <motion.p
+              className="mt-1"
+              variants={textVariants}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              quisque eget congue velit in cursus leo sed sodales est eget turpis.
+            </motion.p>
           </div>
-         <div className="mt-16">
-         <ExploreMoreBtn/>
-         </div>
-        </div>
+
+          <motion.div
+            className="mt-16"
+            variants={textVariants}
+            transition={{ duration: 0.8, delay: 1.5 }}
+          >
+            <ExploreMoreBtn />
+          </motion.div>
+        </motion.div>
       </div>
     </>
   );

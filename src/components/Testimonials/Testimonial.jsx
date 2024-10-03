@@ -34,7 +34,7 @@ const Testimonials = () => {
     <div className="container mx-auto p-12">
       <div className="flex items-center justify-center gap-3 mb-5 text-blue-500">
         <div className="w-8 h-3 bg-blue-500 rounded-xl"></div>
-        <h1 className="font-semibold">Testimonials</h1>
+        <h1 className="text-xl font-semibold">Testimonials</h1>
       </div>
       <h1 className="text-4xl font-bold text-center">What Our Client's Say About Us</h1>
 
