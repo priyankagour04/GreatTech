@@ -13,7 +13,7 @@ const DevProcess = () => {
             <div className="flex items-center justify-center gap-3 mb-5 text-Blue-500">
               {" "}
               <div className="w-8 h-3 bg-Blue-500 rounded-xl"></div>
-              <h1 className=" font-semibold ">WORK PROCESS</h1>
+              <h1 className="text-xl font-semibold ">WORK PROCESS</h1>
             </div>
             <div className="text-4xl font-bold text-center  ">
               <h1>Our Development Process</h1>

@@ -10,6 +10,7 @@ import CommanService from "./pages/Services/CommanService";
 import CountCard from "./components/Cards/CountCard";
 import Offering from "./components/Offering/Offering";
 import DevProcess from "./components/Development/DevProcess";
+import Blogs from "./pages/Blogs/Blogs";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
       <Offering />
       <CountCard />
       <DevProcess/>
+      <Blogs/>
       <Footer />
     </>
   );
