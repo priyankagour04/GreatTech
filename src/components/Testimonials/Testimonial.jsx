@@ -32,9 +32,11 @@ const Testimonials = () => {
 
   return (
     <div className="container mx-auto p-12">
-      <div className="flex items-center justify-center gap-3 mb-5 text-blue-500">
-        <div className="w-8 h-3 bg-blue-500 rounded-xl"></div>
-        <h1 className="text-xl font-semibold">Testimonials</h1>
+      <div className="flex items-center justify-center gap-5 mb-5 text-blue-500">
+      <div className="w-10 h-3 outline outline-2 rounded-xl">
+        <div className="w-5 h-3 bg-Blue-500 rounded-xl"></div>
+        </div>
+        <h1 className="text-xl font-semibold mb-1">Testimonials</h1>
       </div>
       <h1 className="text-4xl font-bold text-center">What Our Client's Say About Us</h1>
 
@@ -43,7 +45,7 @@ const Testimonials = () => {
           <div key={index} className="testimonial-card shadow-2xl p-12">
             <div className="flex space-x-2">
               {Array.from({ length: testimonial.rating }, (_, i) => (
-                <FaStar key={i} />
+                <FaStar key={i} className="" />
               ))}
             </div>
             <p className="text-gray-700 mt-3">

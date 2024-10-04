@@ -56,7 +56,9 @@ const Home = () => {
             variants={textVariants}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-10 h-4 bg-white rounded-xl"></div>
+            <div className="w-11 h-4 outline outline-1 rounded-xl">
+              <div className="w-6 h-4 bg-white rounded-xl "></div>
+            </div>
             <motion.h1 className="text-xl font-bold">
               BEST IT SOLUTION PROVIDER
             </motion.h1>
@@ -90,7 +92,8 @@ const Home = () => {
               variants={textVariants}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              quisque eget congue velit in cursus leo sed sodales est eget turpis.
+              quisque eget congue velit in cursus leo sed sodales est eget
+              turpis.
             </motion.p>
           </div>
 

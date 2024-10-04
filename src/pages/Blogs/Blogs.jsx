@@ -52,9 +52,11 @@ const Blogs = () => {
   return (
     <div className="container mx-auto p-12">
       <div className="text-center mb-8">
-        <div className="flex items-center justify-center gap-3 mb-5 text-blue-500">
-          <div className="w-8 h-3 bg-blue-500 rounded-xl"></div>
-          <h1 className="text-xl font-semibold">Blog & News</h1>
+        <div className="flex items-center justify-center gap-5 mb-5 text-blue-500">
+        <div className="w-10 h-3 outline outline-2 rounded-xl">
+        <div className="w-5 h-3 bg-Blue-500 rounded-xl"></div>
+        </div>
+          <h1 className="text-xl font-semibold mb-1">Blog & News</h1>
         </div>
         <h1 className="text-4xl font-bold">Explore Blogs and News</h1>
       </div>
@@ -73,10 +75,10 @@ const Blogs = () => {
           >
             <div className="relative">
               <img src={blog.img} alt={`Blog ${blog.id}`} className="w-full h-60 object-cover" />
-              <div className="absolute top-4 left-4 bg-blue-500 text-white py-2 px-3 rounded-lg">
-                <span className="text-lg font-bold">{blog.date.split(" ")[0]}</span>
-                <br />
-                <span className="text-sm">{blog.date.split(" ")[1]}</span>
+              <div className="absolute top-4 left-4 bg-blue-500 text-white py-1 px-3 rounded-lg">
+                <span className=" font-bold me-2">{blog.date.split(" ")[0]}</span>
+              
+                <span className=" font-bold">{blog.date.split(" ")[1]}</span>
               </div>
             </div>
             <div className="p-6">
