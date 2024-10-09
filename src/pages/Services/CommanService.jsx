@@ -6,7 +6,7 @@ import ViewAllServices from "../../components/Buttons/ViewAllServices";
 // Define animation variants for the cards
 const cardVariants = {
   hidden: { opacity: 0, x: -100 }, // Start from left (x: -100) and opacity 0
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } }, // Smooth transition to original position
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }, // Smooth transition to original position
 };
 
 const CommanService = () => {
