@@ -7,6 +7,7 @@ export default {
         Blue: { 500: "#0d6efd" },
         text: { "text-light": "#78716c" },
         secondary_color: { 500: "#0f0d1d" },
+        about_bg_color : {500: "#f3f7fb"},
       },
       boxShadow: {
         Cardshadow: "0px 4px 25px 0px #0000000f", // Correct shadow syntax

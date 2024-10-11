@@ -9,6 +9,7 @@ import Offering from "./components/Offering/Offering";
 import DevProcess from "./components/Development/DevProcess";
 import Blogs from "./pages/Blogs/Blogs";
 import Testimonials from "./components/Testimonials/Testimonial";
+import Aboutus from "./components/AboutUs/Aboutus";
 
 function App() {
  
@@ -18,7 +19,7 @@ function App() {
       <Navbar />
       <Home />
       <CommanService />
-
+<Aboutus/>
       <Offering />
       <CountCard />
       <DevProcess/>

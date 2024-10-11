@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import framer-motion for animation
+import React, { useState } from "react";
+import { motion } from "framer-motion"; // Import framer-motion
 import icon1 from "../../assets/images/counter-icon1.png";
 import icon2 from "../../assets/images/counter-icon2.png";
 import icon3 from "../../assets/images/counter-icon3.png";
@@ -56,49 +56,61 @@ const bgVariants = {
 };
 
 const CountCard = () => {
-  // State for counting numbers
   const [counts, setCounts] = useState(services.map(() => 0));
+  const [inViewIndices, setInViewIndices] = useState([]); // Track indices in view
 
-  useEffect(() => {
-    // Increment the numbers when component mounts
-    services.forEach((service, index) => {
-      let start = 0;
-      const increment = setInterval(() => {
-        if (start < service.title) {
-          setCounts((prevCounts) => {
-            const newCounts = [...prevCounts];
-            newCounts[index] = start;
-            return newCounts;
-          });
-          start += Math.ceil(service.title / 100); // Adjust the increment speed
-        } else {
-          clearInterval(increment);
-        }
-      }, 30); // Speed of the count increment
-    });
-  }, []);
+  // Handle count animation when card enters view
+  const startCounting = (index, service) => {
+    let start = 0;
+    const i3ncrement = setInterval(() => {
+      if (start < service.title) {
+        setCounts((prevCounts) => {
+          const newCounts = [...prevCounts];
+          newCounts[index] = start;
+          return newCounts;
+        });
+        start += Math.ceil(service.title / 100); // Adjust the increment speed
+      } else {
+        clearInterval(increment);
+        setCounts((prevCounts) => {
+          const newCounts = [...prevCounts];
+          newCounts[index] = service.title; // Ensure final value is exact
+          return newCounts;
+        });
+      }
+    }, 30); // Speed of the count increment
+  };
 
   return (
-    <>
-      <div className="relative h-56 flex items-center bg-gradient-custom mt-10 mx-28">
-        {/* Background circuit pattern animation */}
-        <motion.div
-          className="absolute inset-0 h-full bg-no-repeat bg-right bg-Counter-Card-item"
-          initial="hidden"
-          animate="visible"
-          variants={bgVariants}
-        ></motion.div>
+    <div className="relative h-56 flex  items-center bg-gradient-custom mt-10 mx-28">
+      {/* Background circuit pattern animation */}
+      <motion.div
+        className="absolute inset-0 h-full bg-no-repeat bg-right bg-Counter-Card-item"
+        initial="hidden"
+        whileInView="visible" // Trigger the background animation every time it comes in view
+        viewport={{ once: false }} // Allows it to animate every time
+        variants={bgVariants}
+      ></motion.div>
 
-        <div className="relative z-10 text-white flex p-24 gap-10">
-          {/* Mapping over services array */}
-          {services.map((service, index) => (
+      <div className="relative z-10 text-white flex  p-24 gap-10">
+        {/* Mapping over services array */}
+        {services.map((service, index) => {
+          const isInView = inViewIndices.includes(index);
+
+          return (
             <motion.div
               key={index}
               className="flex gap-4"
               custom={index + 1} // Custom index for staggered animations
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
+              whileInView="visible" // Trigger animation every time in view
+              viewport={{ once: false }} // Allows repeated animations when card comes into view
+              onViewportEnter={() => {
+                if (!isInView || counts[index] !== service.title) {
+                  startCounting(index, service);
+                  setInViewIndices((prev) => [...prev, index]); // Mark this index as in view
+                }
+              }}
               variants={cardVariants}
             >
               {/* Icon Image */}
@@ -115,10 +127,10 @@ const CountCard = () => {
                 <h1 className="font-semibold">{service.description}</h1>
               </div>
             </motion.div>
-          ))}
-        </div>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 };
 

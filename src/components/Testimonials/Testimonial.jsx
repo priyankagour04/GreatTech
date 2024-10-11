@@ -45,7 +45,7 @@ const Testimonials = () => {
           <div key={index} className="testimonial-card shadow-2xl p-12">
             <div className="flex space-x-2">
               {Array.from({ length: testimonial.rating }, (_, i) => (
-                <FaStar key={i} className="" />
+                <FaStar key={i} className="text-yellow-400" />
               ))}
             </div>
             <p className="text-gray-700 mt-3">
