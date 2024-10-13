@@ -27,14 +27,14 @@ const services = [
 
 const ServiceCard = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-0 mt-8 ">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 mt-8 ">
       {services.map((service, index) => (
         <div
           key={index}
           className="relative shadow-Cardshadow bg-white w-full lg:w-96  p-10 m-4  transform transition-transform group overflow-hidden"
         >
           {/* Background circuit pattern */}
-          <div className="absolute inset-0 left-48 top-5 z-0 md:inset-10 md:left-80  bg-no-repeat bg-top bg-Card-item opacity-50 hover:opacity-0"></div>
+          <div className="absolute inset-0 left-48 top-5 z-0 bg-no-repeat bg-top bg-Card-item opacity-50 hover:opacity-0"></div>
 
           {/* Hover Background Animation */}
           <div className="absolute inset-0 z-0 bg-gradient-custom opacity-0 group-hover:opacity-100 transition-opacity  duration-700"></div>

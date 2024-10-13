@@ -10,18 +10,19 @@ import DevProcess from "./components/Development/DevProcess";
 import Blogs from "./pages/Blogs/Blogs";
 import Testimonials from "./components/Testimonials/Testimonial";
 import Aboutus from "./components/AboutUs/Aboutus";
+import NavbarServices from "./components/Navbar/NavbarServices";
 
 function App() {
  
 
   return (
     <>
-      <Navbar />
+     <NavbarServices/>
       <Home />
       <CommanService />
 <Aboutus/>
       <Offering />
-      <CountCard />
+      {/* <CountCard /> */}
       <DevProcess/>
       <Testimonials/>
       <Blogs/>

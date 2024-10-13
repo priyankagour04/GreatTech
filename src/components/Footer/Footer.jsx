@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-footer-shadow-img bg-secondary_color-500 text-white">
+      <footer className="bg-footer-shadow-img bg-secondary_color-500 text-white ">
         <div className="container mx-auto p-20 grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <motion.div
@@ -64,12 +64,12 @@ const Footer = () => {
 
           {/* IT Solutions Links */}
           <motion.div
-            className="ps-16"
+            className=""
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
           >
-            <h2 className="text-2xl font-bold">IT Solution</h2>
+            <h2 className="text-2xl font-bold ">IT Solution</h2>
             <div className="mt-8 space-y-4 font-semibold">
               {[
                 "IT Management",
@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <motion.div
-            className="ps-10"
+            className=""
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
@@ -142,7 +142,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="mt-6 border-t text-gray-300 border-gray-700 p-16 pt-6">
           <div className="flex items-center justify-between font-semibold">
-            <p className="ms-16">&copy; All Copyright 2024 By Gratech</p>
+            <p className="lg:ms-16">&copy; All Copyright 2024 By Gratech</p>
             <div className="flex space-x-6 ml-4 me-24">
               <a href="#" className="hover:text-white">
                 Terms & Conditions

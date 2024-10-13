@@ -21,7 +21,7 @@ const cardVariants = {
 const DevProcess = () => {
   return (
     <>
-      <div className="p-16">
+      <div className="p-16 ">
         <div>
           <div className="ms-9">
             <div className="flex items-center justify-center gap-5 mb-5 text-Blue-500">
@@ -36,7 +36,7 @@ const DevProcess = () => {
           </div>
 
           {/* Step 1: Development Process Cards with Animation */}
-          <div className="flex justify-around items-center mt-10">
+          <div className="flex justify-around items-center mt-10  grid-cols-1">
             {/* Card 1 */}
             <motion.div
               className="relative inline-block mb-5"
