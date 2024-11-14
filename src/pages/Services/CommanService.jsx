@@ -5,10 +5,13 @@ import ViewAllServices from "../../components/Buttons/ViewAllServices";
 
 // Define animation variants for the cards
 const cardVariants = {
-  hidden: { opacity: 0, x: -100 }, // Start from left (x: -100) and opacity 0
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } }, // Smooth transition to original position
+  hidden: { opacity: 0, y: 100 }, // Start from below (y: 100) and opacity 0
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.4, ease: "easeOut" } 
+  }, // Smooth transition to position
 };
-
 const CommanService = () => {
   return (
     <>
@@ -16,7 +19,7 @@ const CommanService = () => {
         <div className="flex mt-28 justify-between">
           <div className="ms-10">
             <div className="flex items-center gap-4 mb-5 text-Blue-500 ms-1">
-              <div className="w-10 h-3 outline outline-2 rounded-xl">
+             <div className="w-10 h-3 outline outline-2 rounded-xl">
                 <div className="w-5 h-3 bg-Blue-500 rounded-xl"></div>
               </div>
               <h1 className="text-xl font-semibold mb-1">WHAT WE OFFER</h1>

@@ -33,7 +33,7 @@ const name = [
 const Offering = () => {
   return (
     <>
-      <div className=" bg-footer-shadow-img bg-secondary_color-500 mb-28 h-fit p-16 ">
+      <div className=" bg-footer-shadow-img bg-secondary_color-500 mb-28 h-fit p-14 ">
         <div className="relative  bg-no-repeat ">
           <div className="flex  justify-between p-8">
             <div className="  ms-9">
@@ -55,7 +55,7 @@ const Offering = () => {
             </div>
           </div>
 
-          <div className="text-white flex mx-14 justify-around mt-16">
+          <div className="text-white flex mx-14 justify-around mt-16 gap-6">
             <div className=" w-44 h-28 border-gray-700 rounded-lg border-t border-r border-b border-l  text-2xl font-semibold flex justify-center items-center">
               Website
             </div>

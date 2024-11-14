@@ -13,19 +13,17 @@ import Aboutus from "./components/AboutUs/Aboutus";
 import NavbarServices from "./components/Navbar/NavbarServices";
 
 function App() {
- 
-
   return (
     <>
-     <NavbarServices/>
+      <NavbarServices />
       <Home />
       <CommanService />
-<Aboutus/>
+      <Aboutus />
       <Offering />
       {/* <CountCard /> */}
-      <DevProcess/>
-      <Testimonials/>
-      <Blogs/>
+      <DevProcess />
+      <Testimonials />
+      <Blogs />
       <Footer />
     </>
   );
