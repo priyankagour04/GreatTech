@@ -11,6 +11,7 @@ import Blogs from "./pages/Blogs/Blogs";
 import Testimonials from "./components/Testimonials/Testimonial";
 import Aboutus from "./components/AboutUs/Aboutus";
 import NavbarServices from "./components/Navbar/NavbarServices";
+import CaseStudy from "./components/CaseStudies/CaseStudy";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
       <Home />
       <CommanService />
       <Aboutus />
+      <CountCard />
+      <CaseStudy />
       <Offering />
-      {/* <CountCard /> */}
       <DevProcess />
       <Testimonials />
       <Blogs />

@@ -33,7 +33,7 @@ const name = [
 const Offering = () => {
   return (
     <>
-      <div className=" bg-footer-shadow-img bg-secondary_color-500 mb-28 h-fit p-14 ">
+      <div className=" bg-footer-shadow-img bg-secondary_color-500 mb-28 h-fit p-14 mt-28 ">
         <div className="relative  bg-no-repeat ">
           <div className="flex  justify-between p-8">
             <div className="  ms-9">

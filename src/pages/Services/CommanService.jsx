@@ -29,7 +29,7 @@ const CommanService = () => {
             </div>
           </div>
 
-          <div className="me-9">
+          <div className="me-9 mt-5">
             <ViewAllServices />
           </div>
         </div>
