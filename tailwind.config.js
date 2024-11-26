@@ -3,6 +3,16 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        horizontalScroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        horizontalScroll: 'horizontalScroll 10s linear infinite',
+      },
+    
       colors: {
         Blue: { 500: "#0d6efd" },
         text: { "text-light": "#78716c" },
@@ -21,7 +31,8 @@ export default {
         "footer-right-img": "url('/src/assets/images/footer-solid-right.png')",
         "Card-item": "url('/src/assets/images/service-item-shape.png')",
         "Counter-Card-item" :"url('/src/assets/images/counnter-bg-shape.png')",
-        "Offer-bg-shape" : "url('/src/assets/images/offer-bg-shape-left.png')"
+        "Offer-bg-left-shape" : "url('/src/assets/images/offer-bg-shape-left.png')",
+          "Offer-bg-right-shape" : "url('/src/assets/images/offer-bg-shape-right.png')"
       },
     },
   },

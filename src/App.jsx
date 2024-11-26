@@ -20,7 +20,7 @@ function App() {
       <Home />
       <CommanService />
       <Aboutus />
-      <CountCard />
+      {/* <CountCard /> */}
       <CaseStudy />
       <Offering />
       <DevProcess />

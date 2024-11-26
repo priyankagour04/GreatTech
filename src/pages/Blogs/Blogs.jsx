@@ -61,12 +61,12 @@ const Blogs = () => {
         <h1 className="text-4xl font-bold">Explore Blogs and News</h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {/* Step 2: Map over the blogData array */}
         {blogData.map((blog, index) => (
           <motion.div
             key={blog.id}
-            className="bg-white shadow-xl rounded-lg overflow-hidden"
+            className="bg-white shadow-xl "
             custom={index} // Custom index for staggered animation
             initial="hidden"
             whileInView="visible"
