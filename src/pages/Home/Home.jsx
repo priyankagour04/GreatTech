@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <>
       <div
-        className="relative h-screen flex items-center text-white"
+        className="relative items-center text-white py-36 "
         style={{
           backgroundImage: `url(${images[currentImage]})`,
           backgroundSize: "cover",
@@ -43,7 +43,7 @@ const Home = () => {
           transition: "background-image 1.0s ease-in-out",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50 "></div>
         {/* Overlay for better text contrast */}
         <motion.div
           className="z-10 ms-20"
@@ -52,7 +52,7 @@ const Home = () => {
           variants={staggerContainer}
         >
           <motion.div
-            className="flex items-center gap-3 mb-5"
+            className="flex items-center gap-3 mb-5 "
             variants={textVariants}
             transition={{ duration: 0.8 }}
           >

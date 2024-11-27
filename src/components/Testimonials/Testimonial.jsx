@@ -40,7 +40,7 @@ const Testimonials = () => {
       </div>
       <h1 className="text-4xl font-bold text-center">What Our Client's Say About Us</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4 mt-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 mt-8 ">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card shadow-2xl p-12 transition-transform duration-300 ease-in-out hover:scale-105 ">
             <div className="flex space-x-2">

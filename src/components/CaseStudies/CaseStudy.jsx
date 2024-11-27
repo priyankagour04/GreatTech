@@ -36,27 +36,30 @@ const caseStudies = [
 
 const CaseStudy = () => {
   return (
-    <div className="container mx-auto mb-28 p-5">
-      <div className="flex mt-28 justify-between">
-        <div className="ms-10">
-          <div className="flex items-center gap-4 mb-5 text-blue-500 ms-1">
-            <div className="w-10 h-3 outline outline-2 rounded-xl">
-              <div className="w-5 h-3 bg-blue-500 rounded-xl"></div>
-            </div>
-            <h1 className="text-xl font-semibold mb-1">FROM OUR CASE STUDIES</h1>
-          </div>
-          <div className="text-5xl font-bold">
-            <h1>We Delivered Best Solution</h1>
-          </div>
-        </div>
-
-        <div className="me-9 mt-5">
-          <ViewAllCase />
-        </div>
+    <div className="container mx-auto mb-28">
+      <div className="flex flex-col lg:flex-row mt-28 justify-between px-4 sm:px-8 ">
+  {/* Left Section */}
+  <div className="lg:ms-10  lg:text-left">
+    <div className="flex items-center gap-4 mb-5 text-blue-500  lg:justify-start ms-1">
+      <div className="w-10 h-3 outline outline-2 rounded-xl">
+        <div className="w-5 h-3 bg-blue-500 rounded-xl"></div>
       </div>
+      <h1 className="text-lg sm:text-xl font-semibold mb-1">FROM OUR CASE STUDIES</h1>
+    </div>
+    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+      <h1>We Delivered Best Solution</h1>
+    </div>
+  </div>
+
+  {/* Right Section */}
+  <div className="mt-5 lg:mt-0 lg:me-9">
+    <ViewAllCase />
+  </div>
+</div>
+
 
       {/* Carousel Section */}
-      <div className="relative mt-14 ms-14">
+      <div className="relative mt-14 lg:px-16 px-4 ">
         <div className="overflow-x-scroll scroll-smooth snap-x snap-mandatory flex gap-6 overflow-hidden hide-scrollbar">
           {caseStudies.map((caseStudy) => (
             <div

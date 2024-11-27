@@ -36,7 +36,7 @@ const DevProcess = () => {
           </div>
 
           {/* Step 1: Development Process Cards with Animation */}
-          <div className="flex justify-around items-center mt-10  grid-cols-1">
+          <div className="flex justify-around items-center mt-10 grid-cols-1 container mx-auto">
             {/* Card 1 */}
             <motion.div
               className="relative inline-block mb-5"
@@ -96,7 +96,7 @@ const DevProcess = () => {
           </div>
 
           {/* Step Descriptions */}
-          <div className="flex justify-around text-center">
+          <div className="flex justify-around text-center container mx-auto">
             <motion.div
               className="text-center max-w-xs"
               custom={1}

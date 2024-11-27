@@ -23,14 +23,15 @@ const itemVariants = {
 
 const Aboutus = () => {
   return (
-    <div className="grid grid-cols-2 bg-about_bg_color-500 mb-32 overflow-hidden">
-      {/* Image Section */}
+    <div className="grid grid-cols-2 bg-about_bg_color-500 mb-32 overflow-hidden ">
+      <div className="">
+        {/* Image Section */}
       <motion.div
         className="relative img_section p-5 my-10 ms-16 flex"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-      >
+      >  
         <img src={aboutImg1} className="" alt="About Image 1" />
         <motion.img
           src={aboutImg2}
@@ -41,6 +42,7 @@ const Aboutus = () => {
           alt="About Image 2"
         />
       </motion.div>
+      </div>
 
       {/* Content Section */}
       <motion.div

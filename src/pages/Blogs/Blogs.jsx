@@ -61,37 +61,37 @@ const Blogs = () => {
         <h1 className="text-4xl font-bold">Explore Blogs and News</h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-        {/* Step 2: Map over the blogData array */}
-        {blogData.map((blog, index) => (
-          <motion.div
-            key={blog.id}
-            className="bg-white shadow-xl "
-            custom={index} // Custom index for staggered animation
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }} // Animation triggers when it comes into view
-            variants={cardVariants}
-          >
-            <div className="relative">
-              <img src={blog.img} alt={`Blog ${blog.id}`} className="w-full h-60 object-cover" />
-              <div className="absolute top-4 left-4 bg-blue-500 text-white py-1 px-3 rounded-lg">
-                <span className=" font-bold me-2">{blog.date.split(" ")[0]}</span>
-              
-                <span className=" font-bold">{blog.date.split(" ")[1]}</span>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="flex items-center gap-3 text-gray-600 text-sm">
-                <FaUser /> <span>By {blog.author}</span>
-                <FaComments /> <span>{blog.comments} Comments</span>
-              </div>
-              <h2 className="text-xl font-bold my-4">{blog.title}</h2>
-              <ExploreMoreBtn label="Read More" />
-            </div>
-          </motion.div>
-        ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {/* Step 2: Map over the blogData array */}
+  {blogData.map((blog, index) => (
+    <motion.div
+      key={blog.id}
+      className="bg-white shadow-xl"
+      custom={index} // Custom index for staggered animation
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }} // Animation triggers when it comes into view
+      variants={cardVariants}
+    >
+      <div className="relative">
+        <img src={blog.img} alt={`Blog ${blog.id}`} className="w-full object-cover " />
+        <div className="absolute top-4 left-4 bg-blue-500 text-white py-1 px-3 rounded-lg">
+          <span className="font-bold me-2">{blog.date.split(" ")[0]}</span>
+          <span className="font-bold">{blog.date.split(" ")[1]}</span>
+        </div>
       </div>
+      <div className="p-6">
+        <div className="flex items-center gap-3 text-gray-600 text-sm">
+          <FaUser /> <span>By {blog.author}</span>
+          <FaComments /> <span>{blog.comments} Comments</span>
+        </div>
+        <h2 className="text-xl font-bold my-4">{blog.title}</h2>
+        <ExploreMoreBtn label="Read More" />
+      </div>
+    </motion.div>
+  ))}
+</div>
+
     </div>
   );
 };
