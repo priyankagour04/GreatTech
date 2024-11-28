@@ -44,7 +44,8 @@ const Aboutus = () => {
       </motion.div>
       </div>
 
-      {/* Content Section */}
+    <div>
+        {/* Content Section */}
       <motion.div
         className="p-5 mt-10"
         variants={containerVariants}
@@ -111,6 +112,7 @@ const Aboutus = () => {
           <img src={signature} alt="Signature" />
         </motion.div>
       </motion.div>
+    </div>
     </div>
   );
 };

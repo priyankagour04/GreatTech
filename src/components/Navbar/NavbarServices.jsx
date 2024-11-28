@@ -1,15 +1,21 @@
-import React from 'react'
-import Navbar from './Navbar'
+import Navbar from "./Navbar";
 
-const NavbarServices = () => {
+const NavbarService = () => {
   return (
-   <>
-    <Navbar
-        
-      
-    />
-   </>
-  )
-}
+    <>
+      <Navbar
+        contactText={"Contact Us +"}
+        links={[
+          { name: "Home" },
+          { name: "About" },
+          { name: "Services" },
+          { name: "Pages" },
+          { name: "Blogs" },
+          { name: "Contact" },
+        ]}
+      />
+    </>
+  );
+};
 
-export default NavbarServices;
+export default NavbarService;
