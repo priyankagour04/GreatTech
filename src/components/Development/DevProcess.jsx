@@ -43,7 +43,6 @@ const DevProcess = () => {
               custom={1} // Custom index for animation delay
               initial="hidden"
               whileInView="visible" // Trigger animation when in view
-            
               variants={cardVariants}
             >
               <img
@@ -62,7 +61,6 @@ const DevProcess = () => {
               custom={2} // Stagger index for animation delay
               initial="hidden"
               whileInView="visible"
-              
               variants={cardVariants}
             >
               <img
@@ -81,7 +79,6 @@ const DevProcess = () => {
               custom={3} // Stagger index for animation delay
               initial="hidden"
               whileInView="visible"
-            
               variants={cardVariants}
             >
               <img
@@ -102,7 +99,6 @@ const DevProcess = () => {
               custom={1}
               initial="hidden"
               whileInView="visible"
-            
               variants={cardVariants}
             >
               <h2 className="font-semibold text-lg">Define Requirements</h2>
@@ -117,7 +113,6 @@ const DevProcess = () => {
               custom={2}
               initial="hidden"
               whileInView="visible"
-             
               variants={cardVariants}
             >
               <h2 className="font-semibold text-lg">Design & Prototyping</h2>
@@ -132,7 +127,6 @@ const DevProcess = () => {
               custom={3}
               initial="hidden"
               whileInView="visible"
-           
               variants={cardVariants}
             >
               <h2 className="font-semibold text-lg">Final Solution</h2>

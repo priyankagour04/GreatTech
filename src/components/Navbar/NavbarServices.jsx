@@ -6,12 +6,12 @@ const NavbarService = () => {
       <Navbar
         contactText={"Contact Us +"}
         links={[
-          { name: "Home" },
-          { name: "About" },
-          { name: "Services" },
-          { name: "Pages" },
-          { name: "Blogs" },
-          { name: "Contact" },
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+          { name: "Services", path: "/services" },
+          { name: "Pages", path: "/pages" },
+          { name: "Blogs", path: "/blogs" },
+          { name: "Contact", path: "/contact" },
         ]}
       />
     </>

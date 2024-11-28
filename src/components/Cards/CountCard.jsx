@@ -62,16 +62,17 @@ const CountCard = () => {
   // Handle count animation when card enters view
   const startCounting = (index, service) => {
     let start = 0;
-    const i3ncrement = setInterval(() => {
+    const incrementSpeed = Math.ceil(service.title / 100); // Adjust the increment speed
+    const intervalId = setInterval(() => {
       if (start < service.title) {
         setCounts((prevCounts) => {
           const newCounts = [...prevCounts];
           newCounts[index] = start;
           return newCounts;
         });
-        start += Math.ceil(service.title / 100); // Adjust the increment speed
+        start += incrementSpeed; // Increment count
       } else {
-        clearInterval(increment);
+        clearInterval(intervalId); // Stop the interval once the count reaches the target value
         setCounts((prevCounts) => {
           const newCounts = [...prevCounts];
           newCounts[index] = service.title; // Ensure final value is exact
@@ -82,7 +83,7 @@ const CountCard = () => {
   };
 
   return (
-    <div className="relative h-56 flex  items-center bg-gradient-custom my-10 mx-28 overflow-hidden">
+    <div className="relative flex items-center bg-gradient-custom my-10 mx-28 overflow-hidden">
       {/* Background circuit pattern animation */}
       <motion.div
         className="absolute inset-0 h-full bg-no-repeat bg-right bg-Counter-Card-item"
@@ -92,7 +93,7 @@ const CountCard = () => {
         variants={bgVariants}
       ></motion.div>
 
-      <div className="relative z-10 text-white flex  p-24 gap-10">
+      <div className="relative z-10 text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 p-20">
         {/* Mapping over services array */}
         {services.map((service, index) => {
           const isInView = inViewIndices.includes(index);

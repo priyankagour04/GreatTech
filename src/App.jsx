@@ -1,33 +1,28 @@
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Footer from "./components/Footer/Footer";
-import ServiceCard from "./components/Cards/ServiceCard";
-import CommanService from "./pages/Services/CommanService";
-import CountCard from "./components/Cards/CountCard";
-import Offering from "./components/Offering/Offering";
-import DevProcess from "./components/Development/DevProcess";
-import Blogs from "./pages/Blogs/Blogs";
-import Testimonials from "./components/Testimonials/Testimonial";
-import Aboutus from "./components/AboutUs/Aboutus";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarServices from "./components/Navbar/NavbarServices";
-import CaseStudy from "./components/CaseStudies/CaseStudy";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
+import CommanService from "./pages/Services/CommanService";
+import Aboutus from "./components/AboutUs/Aboutus";
+import Testimonials from "./components/Testimonials/Testimonial";
+import Blogs from "./components/Blogs/Blogs";
+import About from "./pages/About/About";
 
 function App() {
   return (
-    <>
+    <Router>
       <NavbarServices />
-      <Home />
-      <CommanService />
-      <Aboutus />
-      {/* <CountCard /> */}
-      <CaseStudy />
-      <Offering />
-      <DevProcess />
-      <Testimonials />
-      <Blogs />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/services" element={<CommanService />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/contact" element={<Blogs />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

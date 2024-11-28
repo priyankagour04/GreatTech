@@ -5,7 +5,7 @@ import caseImg1 from "../../assets/images/case-image1.jpg";
 import caseImg2 from "../../assets/images/case-image2.jpg";
 import caseImg3 from "../../assets/images/case-image3.jpg";
 import caseImg4 from "../../assets/images/case-image4.jpg";
-import '../../style/Home.css'
+import "../../style/Home.css";
 
 const caseStudies = [
   {
@@ -38,25 +38,26 @@ const CaseStudy = () => {
   return (
     <div className="container mx-auto mb-28">
       <div className="flex flex-col lg:flex-row mt-28 justify-between px-4 sm:px-8 ">
-  {/* Left Section */}
-  <div className="lg:ms-10  lg:text-left">
-    <div className="flex items-center gap-4 mb-5 text-blue-500  lg:justify-start ms-1">
-      <div className="w-10 h-3 outline outline-2 rounded-xl">
-        <div className="w-5 h-3 bg-blue-500 rounded-xl"></div>
+        {/* Left Section */}
+        <div className="lg:ms-10  lg:text-left">
+          <div className="flex items-center gap-4 mb-5 text-blue-500  lg:justify-start ms-1">
+            <div className="w-10 h-3 outline outline-2 rounded-xl">
+              <div className="w-5 h-3 bg-blue-500 rounded-xl"></div>
+            </div>
+            <h1 className="text-lg sm:text-xl font-semibold mb-1">
+              FROM OUR CASE STUDIES
+            </h1>
+          </div>
+          <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            <h1>We Delivered Best Solution</h1>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="mt-5 lg:mt-0 lg:me-9">
+          <ViewAllCase />
+        </div>
       </div>
-      <h1 className="text-lg sm:text-xl font-semibold mb-1">FROM OUR CASE STUDIES</h1>
-    </div>
-    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-      <h1>We Delivered Best Solution</h1>
-    </div>
-  </div>
-
-  {/* Right Section */}
-  <div className="mt-5 lg:mt-0 lg:me-9">
-    <ViewAllCase />
-  </div>
-</div>
-
 
       {/* Carousel Section */}
       <div className="relative mt-14 lg:px-16 px-4 ">
