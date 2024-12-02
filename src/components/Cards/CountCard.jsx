@@ -83,7 +83,7 @@ const CountCard = () => {
   };
 
   return (
-    <div className="relative flex items-center bg-gradient-custom my-10 mx-28 overflow-hidden">
+    <div className="relative flex items-center bg-gradient-custom my-10 xl:mx-24 mx-8 overflow-hidden">
       {/* Background circuit pattern animation */}
       <motion.div
         className="absolute inset-0 h-full bg-no-repeat bg-right bg-Counter-Card-item"

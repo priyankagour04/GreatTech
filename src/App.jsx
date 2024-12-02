@@ -6,8 +6,12 @@ import Home from "./pages/Home/Home";
 import CommanService from "./pages/Services/CommanService";
 import Aboutus from "./components/AboutUs/Aboutus";
 import Testimonials from "./components/Testimonials/Testimonial";
-import Blogs from "./components/Blogs/Blogs";
+
 import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
+import Blogs from "./pages/Blogs/Blogs";
+import Contact from "./pages/Contact/Contact";
+import Team from "./pages/OurTeam/Team";
 
 function App() {
   return (
@@ -15,11 +19,11 @@ function App() {
       <NavbarServices />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/services" element={<CommanService />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/contact" element={<Blogs />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/team" element={<Team/>} />
+        <Route path="/blogs" element={<Blogs/>} />
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
       <Footer />
     </Router>

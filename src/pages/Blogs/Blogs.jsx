@@ -1,11 +1,10 @@
-import React from "react";
-import aboutbanner from "../../assets/images/Aboutbanner-page.jpg";
-import Aboutus from "../../components/AboutUs/Aboutus";
+import React from 'react'
 import { RiArrowRightDoubleLine } from "react-icons/ri";
-import Offering from "../../components/Offering/Offering";
+import aboutbanner from "../../assets/images/Aboutbanner-page.jpg";
+import BlogCards from '../../components/Cards/BlogCards';
 import { useNavigate } from "react-router-dom";
 
-const About = () => {
+const Blogs = () => {
 
   const navigate = useNavigate();
 
@@ -13,9 +12,10 @@ const About = () => {
     navigate("/"); // Replace "/services" with your desired URL
   };
 
+
   return (
-    <>
-      <div className="relative">
+   <>
+        <div className="relative">
         {/* Set the image as the background of the div */}
         <img
           className="w-full h-[400px] sm:h-[500px] md:h-[450px] object-cover"
@@ -23,7 +23,7 @@ const About = () => {
           alt="About Us Banner"
         />
 
-        {/* Odverlay for better text visibility */}
+        {/* Overlay for better text visibility */}
         <div className="absolute inset-0 bg-blue-900 bg-opacity-50"></div>
 
         {/* Decorative shapes */}
@@ -32,28 +32,19 @@ const About = () => {
 
         {/* Text positioned over the image */}
         <div className="absolute right-44 top-36 sm:inset-16 md:right-10 md:top-48 flex flex-col justify-start text-white font-bold gap-2 px-4 sm:px-6 md:px-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl">About Us</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl">Our Blogs</h1>
           <div className="flex items-center gap-1 sm:gap-3 md:gap-2">
-            <h1 onClick={handleClick} className="cursor-pointer">Home</h1>
+            <h1 onClick={handleClick} className='cursor-pointer' >Home</h1>
             <div className="mt-1">
               <RiArrowRightDoubleLine />
             </div>
-            <h1>About Us</h1>
+            <h1>Blogs</h1>
           </div>
         </div>
       </div>
+      <BlogCards/>
+   </>
+  )
+}
 
-      {/* About Us Section */}
-      <div className="my-16 sm:my-24 md:my-32">
-        <Aboutus />
-      </div>
-
-      {/* Offering Section */}
-      <div className="my-16 sm:my-24 md:my-32">
-        <Offering />
-      </div>
-    </>
-  );
-};
-
-export default About;
+export default Blogs
