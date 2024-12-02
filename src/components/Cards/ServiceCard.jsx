@@ -37,7 +37,7 @@ const ServiceCard = () => {
         <div className="absolute inset-0 left-48 top-5 z-0 bg-no-repeat bg-top bg-Card-item opacity-50 group-hover:opacity-0 transition-opacity duration-500"></div>
   
         {/* Hover Background Animation */}
-        <div className="absolute inset-0 z-0 bg-gradient-custom opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+        <div className="absolute inset-0 bg-gradient-custom transform scale-x-0 group-hover:scale-x-100 group-hover:bg-gradient-custom transition-all duration-700 ease-in-out origin-left"></div>
   
         {/* Image Section */}
         <div className="relative z-10 flex justify-center items-center h-16 w-16 bg-blue-50 group-hover:bg-white ">

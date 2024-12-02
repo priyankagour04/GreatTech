@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import signature from "../../assets/images/singature.png";
 import aboutImg1 from "../../assets/images/about-image1.jpg";
 import aboutImg2 from "../../assets/images/about-two-image2.png";
+import Aboutbtn from "../Buttons/Aboutbtn";
 
 const containerVariants = {
   hidden: { opacity: 0 }, // Initial state for the container
@@ -106,9 +107,7 @@ const Aboutus = () => {
           className="mt-10 flex gap-10"
           variants={itemVariants}
         >
-          <div className="h-14 w-44 shadow-lg bg-gradient-custom font-semibold text-white flex items-center justify-center">
-            About Us <FaArrowRight className="ms-3" />
-          </div>
+         <Aboutbtn/>
           <img src={signature} alt="Signature" />
         </motion.div>
       </motion.div>
