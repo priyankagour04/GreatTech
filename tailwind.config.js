@@ -39,6 +39,12 @@ export default {
           "url('/src/assets/images/inner-banner-shape1.png')",
           "About-right-shape":
           "url('/src/assets/images/inner-banner-shape3.png')",
+          "Homebanner-line-shape":
+          "url('/src/assets/images/Homebanner-shape-right-line.png')",
+          "Homebanner-shape":
+          "url('/src/assets/images/Homebanner-shape-right.png')"
+            
+            
       },
     },
   },

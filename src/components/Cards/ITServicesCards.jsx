@@ -57,7 +57,8 @@ const ITServicesCards = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 my-24">
+  <>
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 my-24">
       {services.map((service, index) => (
         <div
           key={index}
@@ -99,6 +100,7 @@ const ITServicesCards = () => {
         </div>
       ))}
     </div>
+  </>
   );
 };
 
